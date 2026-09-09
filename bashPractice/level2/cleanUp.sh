@@ -17,7 +17,7 @@ then
 fi
 
 files=$(find "$directory" -type f -mtime +"$days")
-
+count=$(find "$directory" -type f -mtime +"$days" | wc -l)
 if [[ -z "$files"  ]]
 then 
     echo "No files older then $days were found"
@@ -27,13 +27,20 @@ fi
 echo "$files"
 echo 
 
-read -p "Do you want to delete these files? [Y/N]" response
+read -p "Do you want to delete $count files? [Y/N]" response
 
 if [[ "$response" == "Y" ]] || [[ "$response" == "y" ]]
-then 
-    for file in $files
-    do 
-        rm -- "$file"
-    done
+then
+    while IFS= read -r FILE; do
+        rm -- "$FILE"
+    done <<< "$files"
+
+    # for file in $files
+    # do 
+    #     rm -- "$file"
+    # done
+    echo "$count files were deleted"
+else 
+    echo "No files were deleted"
 fi
 

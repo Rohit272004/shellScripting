@@ -1,0 +1,5 @@
+rohit 1000 developer 24 
+rahul 1001 admin 31
+amit 1002 tester 26
+sneha 1003 admin 35
+ram 1005 develop 32
