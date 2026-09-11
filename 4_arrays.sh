@@ -18,3 +18,11 @@ echo "${myArray[*]:1}"
 myArray+=(30 40 50)
 
 echo "${myArray[*]}"
+
+skills=("Git" "Scripting" "devops")
+
+for skill in "${skills[@]}"
+do 
+	echo "$skill"
+done
+
