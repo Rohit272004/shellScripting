@@ -2,4 +2,4 @@
 Description=Health Monitor
 [Service]
 Type=oneshot
-ExecStart=/usr/local/bin/monitor.sh
+ExecStart=/home/rohit/Desktop/shellScripting/Project/codeBase/bash/monitor.sh
