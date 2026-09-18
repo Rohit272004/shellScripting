@@ -1,0 +1,12 @@
+[Unit]
+Description=MERN Monitor Backend WebSocket
+After=network.target mongod.service
+
+[Service]
+WorkingDirectory=/home/YOUR_USER/linux-total-monitor-websocket/backend
+ExecStart=/usr/bin/node server.js
+Restart=always
+User=YOUR_USER
+
+[Install]
+WantedBy=multi-user.target

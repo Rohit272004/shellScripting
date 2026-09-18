@@ -1,0 +1,8 @@
+[Unit]
+Description=Run health every 2 mins
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=2min
+Unit=monitor.service
+[Install]
+WantedBy=timers.target

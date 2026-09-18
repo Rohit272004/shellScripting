@@ -1,0 +1,115 @@
+/* frontend/src/App.css - Complete SOC Dashboard Style */
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.app {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.badge.LIVE {
+  background: #16a34a;
+  color: white;
+}
+
+.badge.DISCONNECTED {
+  background: #dc2626;
+  color: white;
+}
+
+/* Top 3 cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 15px 0;
+}
+
+/* 2 column for services/docker */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #38bdf8;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #7dd3fc;
+}
+
+.card h3 {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.card h1 {
+  margin: 5px 0;
+  font-size: 32px;
+}
+
+.card.alert {
+  border-left-color: #f87171;
+}
+
+.card.alert h2 {
+  color: #fca5a5;
+}
+
+pre {
+  background: #0f172a;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: 1px solid #334155;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 100px;
+  color: #38bdf8;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .grid, .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
