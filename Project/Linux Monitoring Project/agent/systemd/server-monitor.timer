@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Server Monitoring Agent Every 2 Minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=2min
+Unit=server-monitor.service
+
+[Install]
+WantedBy=timers.target

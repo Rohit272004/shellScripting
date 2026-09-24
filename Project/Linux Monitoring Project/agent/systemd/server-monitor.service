@@ -1,0 +1,8 @@
+[Unit]
+Description=Linux Server Monitoring Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/server-monitoring-project/agent/monitor.sh
